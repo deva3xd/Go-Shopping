@@ -14,10 +14,12 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('category_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
-            $table->string('slug');
             $table->text('description');
             $table->decimal('price', 10, 2);
+            $table->decimal('discount', 10, 2);
+            $table->decimal('rating', 10, 2);
             $table->integer('stock');
+            $table->string('brand')->nullable();
             $table->timestamps();
         });
     }
