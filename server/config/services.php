@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'dummyjson' => [
+        'products' => env('API_PRODUCTS'),
+        'categories' => env('API_CATEGORIES'),
+    ]
 ];
